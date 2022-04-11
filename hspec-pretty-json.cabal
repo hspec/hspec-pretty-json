@@ -1,0 +1,55 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           hspec-pretty-json
+version:        0.0.0
+author:         Simon Hengel <sol@typeful.net>
+maintainer:     Simon Hengel <sol@typeful.net>
+copyright:      (c) 2022 Simon Hengel
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+
+library
+  exposed-modules:
+      Test.Hspec.PrettyJSON
+  other-modules:
+      Paths_hspec_pretty_json
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      aeson
+    , aeson-pretty ==0.8.*
+    , base >=4.11.0.0 && <5
+    , bytestring
+    , hspec-core >=2.10 && <3
+    , text
+  default-language: Haskell2010
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Test.Hspec.PrettyJSON
+      Test.Hspec.PrettyJSONSpec
+      Paths_hspec_pretty_json
+  hs-source-dirs:
+      src
+      test
+  ghc-options: -Wall
+  cpp-options: -DTEST
+  build-tool-depends:
+      hspec-discover:hspec-discover
+  build-depends:
+      aeson
+    , aeson-pretty ==0.8.*
+    , base >=4.11.0.0 && <5
+    , bytestring
+    , hspec ==2.*
+    , hspec-core >=2.10 && <3
+    , text
+  default-language: Haskell2010
