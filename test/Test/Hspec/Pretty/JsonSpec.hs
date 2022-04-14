@@ -49,7 +49,7 @@ spec = do
       prettyJson True json json `shouldBe` (Just . (id &&& id) . intercalate "\n") [
           "{"
         , "  \"age\": 23,"
-        , "  \"name\": \"Jo\955e\""
+        , "  \"name\": \"Jo\x03bb\&e\""
         , "}"
         ]
 
