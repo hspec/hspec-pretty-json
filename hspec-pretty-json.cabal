@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.35.0.
+-- This file has been generated from package.yaml by hpack version 0.35.2.
 --
 -- see: https://github.com/sol/hpack
 
@@ -35,15 +35,17 @@ test-suite spec
   main-is: Spec.hs
   other-modules:
       Test.Hspec.PrettyJSON
+      README
       Test.Hspec.PrettyJSONSpec
       Paths_hspec_pretty_json
   hs-source-dirs:
       src
       test
   ghc-options: -Wall
-  cpp-options: -DTEST
+  cpp-options: -DTEST -pgmL markdown-unlit
   build-tool-depends:
       hspec-discover:hspec-discover
+    , markdown-unlit:markdown-unlit
   build-depends:
       aeson
     , aeson-pretty ==0.8.*

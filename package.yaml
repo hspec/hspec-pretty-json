@@ -19,8 +19,10 @@ library: {}
 
 tests:
   spec:
-    cpp-options: -DTEST
-    build-tools: hspec-discover
+    cpp-options: -DTEST -pgmL markdown-unlit
+    build-tools:
+      - hspec-discover
+      - markdown-unlit
     main: Spec.hs
     source-dirs:
       - test
