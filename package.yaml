@@ -1,6 +1,6 @@
 name: hspec-pretty-json
 
-copyright: (c) 2022 Simon Hengel
+copyright: (c) 2022-2023 Simon Hengel
 author: Simon Hengel <sol@typeful.net>
 
 ghc-options: -Wall
@@ -19,7 +19,8 @@ library: {}
 
 tests:
   spec:
-    cpp-options: -DTEST -pgmL markdown-unlit
+    cpp-options: -DTEST
+    ghc-options: -pgmL markdown-unlit
     build-tools:
       - hspec-discover
       - markdown-unlit

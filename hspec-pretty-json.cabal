@@ -8,7 +8,7 @@ name:           hspec-pretty-json
 version:        0.0.0
 author:         Simon Hengel <sol@typeful.net>
 maintainer:     Simon Hengel <sol@typeful.net>
-copyright:      (c) 2022 Simon Hengel
+copyright:      (c) 2022-2023 Simon Hengel
 license:        MIT
 license-file:   LICENSE
 build-type:     Simple
@@ -41,8 +41,8 @@ test-suite spec
   hs-source-dirs:
       src
       test
-  ghc-options: -Wall
-  cpp-options: -DTEST -pgmL markdown-unlit
+  ghc-options: -Wall -pgmL markdown-unlit
+  cpp-options: -DTEST
   build-tool-depends:
       hspec-discover:hspec-discover
     , markdown-unlit:markdown-unlit
